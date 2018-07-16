@@ -10,7 +10,7 @@ services:
       depends_on:
           - "app"
       environment:
-        - DOMAIN_NAME=btp.xrp.markets
+        - DOMAIN_NAME=btp.my-domain.com
   gui:
         container_name: GUI
         build: gui

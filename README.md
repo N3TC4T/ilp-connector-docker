@@ -14,15 +14,15 @@ If you need to install docker yourself, follow the [official installation guide]
 Before starting you need to have a domain for the certificate .
 
 
-If you are using ubuntu 14.4 you may have an issue running certbot, if so try to export the following variables and run it again: 
+If you are using ubuntu 14.4 you may have an issue running certbot, if so try to export the following variables and run it again:
 
 ```
-export LC_ALL="en_US.UTF-8"  
-export LC_CTYPE="en_US.UTF-8"  
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 ```
 
 
-1. Clone the repo 
+1. Clone the repo
 
 ```bash
 $ git clone https://github.com/xrp-community/tf-connector-docker.git ~/tf-connector
@@ -31,13 +31,13 @@ $ git clone https://github.com/xrp-community/tf-connector-docker.git ~/tf-connec
 1. Download the installer
 
 ```bash
-$ wget https://dl.eff.org/certbot-auto 
+$ wget https://dl.eff.org/certbot-auto
 ```
 
 2. Allow it to be an executable
 
 ```bash
-$ chmod a+x certbot-auto 
+$ chmod a+x certbot-auto
 ```
 
 3. Get SSL certificate for your domain
@@ -50,7 +50,7 @@ $ ./certbot-auto certonly --standalone -d YOUR_DOMAIN
 
 5. Decide if you want to share your email or not
 
-6. Copy then to your certs folder, see that you need to update the following path your your server path: 
+6. Copy then to your certs folder, see that you need to update the following path your your server path:
 
 ```bash
 $ cp /etc/letsencrypt/live/YOUR_DOMAIN/* ~/tf-connector/nginx/certs/
@@ -83,8 +83,6 @@ services:
         - '443:443'
       depends_on:
           - "app"
-      volumes:
-          - /etc/nginx
       environment:
         - DOMAIN_NAME=btp.my-domain.com
   gui:
@@ -103,7 +101,6 @@ services:
         - "127.0.0.1:8080:8080"
         - "127.0.0.1:7769:7769"
         - "127.0.0.1:7768:7768"
-
 
 
 ```
@@ -142,7 +139,7 @@ README.](https://github.com/sharafian/moneyd#sending-payments)
 The connector you deployed comes with a GUI to view routes, ping destinations,
 and send test payments. This GUI runs as a webserver.
 
-To access it, forward the GUI's port to your local machine. 
+To access it, forward the GUI's port to your local machine.
 
 ```
 ssh -N -L 7770:localhost:7770 root@YOUR_IP_ADDRESS
@@ -156,7 +153,7 @@ If you want to show your appreciation, you can donate via XRP to
 ### Contact
 
 [<img src="https://user-images.githubusercontent.com/6250203/42041517-5435904c-7b07-11e8-906b-39a5f763a406.png" data-canonical-src="https://twitter.com/baltazar223" width="80" height="80" />
-](https://twitter.com/baltazar223) 
+](https://twitter.com/baltazar223)
 
 [3]: https://github.com/docker/compose
 [4]: https://docs.docker.com/

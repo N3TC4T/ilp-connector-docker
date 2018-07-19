@@ -1,6 +1,6 @@
-# tf-connector-docker
+# ilp-connector-docker
 
-Docker Tier 1 With XRP
+ILP connector With XRP
 
 Docker images are built for quick deployment in various computing cloud providers. For more information on docker and containerization technologies, refer to [official document][4].
 

@@ -30,7 +30,7 @@ const ilspServer = {
     assetCode: 'XRP',
     assetScale: 6,
     options: {
-        port: 8080,
+        port: 7443,
         xrpServer: 'wss://s2.ripple.com',
         address,
         secret
@@ -60,7 +60,8 @@ const connectorApp = {
         CONNECTOR_STORE_PATH: '/srv/app/connector-data',
         CONNECTOR_ACCOUNTS: JSON.stringify({
             peer: peerPlugin,
-            local: miniAccounts
+            local: miniAccounts,
+            ilsp: ilspServer
         })
     },
     script: path.resolve(__dirname, 'src/index.js')

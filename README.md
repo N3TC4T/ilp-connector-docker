@@ -43,7 +43,7 @@ $ chmod a+x certbot-auto
 3. Get SSL certificate for your domain
 
 ```bash
-$ ./certbot-auto certonly --standalone -d YOUR_DOMAIN
+$ ./certbot-auto certonly --standalone -d <YOUR_DOMAIN>
 ```
 
 4. Type your email
@@ -53,7 +53,7 @@ $ ./certbot-auto certonly --standalone -d YOUR_DOMAIN
 6. Copy then to your certs folder, see that you need to update the following path your your server path:
 
 ```bash
-$ cp /etc/letsencrypt/live/YOUR_DOMAIN/* ~/tf-connector/nginx/certs/
+$ cp /etc/letsencrypt/live/<YOUR_DOMAIN>/* ~/tf-connector/nginx/certs/
 ```
 
 7. Edit connector config and fill the required informations

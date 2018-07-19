@@ -26,7 +26,7 @@ VOLUME /srv/app/connector-data
 # Copy PM2 config and start script
 COPY launch.config.js .
 
-EXPOSE 8080
+EXPOSE 7443
 EXPOSE 7769
 EXPOSE 7768
 

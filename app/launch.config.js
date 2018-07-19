@@ -2,8 +2,8 @@
 
 const path = require('path');
 
-const address = 'YOUR_HOT_WALLET_RIPPLE_ADDRESS';
-const secret = 'YOUR_HOT_WALLET_RIPPLE_SECRET';
+const address = '<YOUR_HOT_WALLET_RIPPLE_ADDRESS>';
+const secret = '<YOUR_HOT_WALLET_RIPPLE_SECRET>';
 
 const peerPlugin = {
     relation: 'peer',
@@ -15,18 +15,27 @@ const peerPlugin = {
         settleThreshold: '-5000000',
         settleTo: '0'
     },
-    options: {
-        assetScale: 9,
-        listener: {
-            port: 8080,
-            secret: 'RANDOM_SECRET'
-        },
-        rippledServer: 'wss://s1.ripple.com',
-        secret,
+   options: {
+        server: <PEER BTP URL>
+        rippledServer: 'wss://s2.ripple.com',
+        peerAddress: '<PEER RIPPLE ADDRESS>',
         address,
-        peerAddress: 'RIPPLE_ADDRESS_OF_PEER'
-    }
+        secret
+   }
 };
+
+const ilspServer = {
+    relation: 'child',
+    plugin: 'ilp-plugin-xrp-asym-server',
+    assetCode: 'XRP',
+    assetScale: 6,
+    options: {
+        port: 8080,
+        xrpServer: 'wss://s2.ripple.com',
+        address,
+        secret
+    }
+}
 
 const miniAccounts = {
     relation: 'child',

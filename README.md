@@ -25,7 +25,7 @@ export LC_CTYPE="en_US.UTF-8"
 1. Clone the repo
 
 ```bash
-$ git clone https://github.com/xrp-community/tf-connector-docker.git ~/tf-connector
+$ git clone https://github.com/N3TC4T/tf-connector-docker.git ~/tf-connector
 ```
 
 1. Download the installer

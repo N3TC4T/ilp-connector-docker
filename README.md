@@ -25,7 +25,7 @@ export LC_CTYPE="en_US.UTF-8"
 1. Clone the repo
 
 ```bash
-$ git clone https://github.com/N3TC4T/tf-connector-docker.git ~/tf-connector
+$ git clone https://github.com/N3TC4T/ilp-connector-docker.git ~/ilp-connector
 ```
 
 1. Download the installer
@@ -53,13 +53,13 @@ $ ./certbot-auto certonly --standalone -d <YOUR_DOMAIN>
 6. Copy then to your certs folder, see that you need to update the following path your your server path:
 
 ```bash
-$ cp /etc/letsencrypt/live/<YOUR_DOMAIN>/* ~/tf-connector/nginx/certs/
+$ cp /etc/letsencrypt/live/<YOUR_DOMAIN>/* ~/ilp-connector/nginx/certs/
 ```
 
 7. Edit connector config and fill the required informations
 
 ```bash
-$ vim ~/tf-connector/app/launch.config.js
+$ vim ~/ilp-connector/app/launch.config.js
 ```
 
 
@@ -108,7 +108,7 @@ services:
 Run the connector
 
 ```bash
-$ cd ~/tf-connector
+$ cd ~/ilp-connector
 $ docker-compose up -d
 $ docker-compose ps
 ```
@@ -144,11 +144,6 @@ To access it, forward the GUI's port to your local machine.
 ```
 ssh -N -L 7770:localhost:7770 root@YOUR_IP_ADDRESS
 ```
-
-### Donations
-
-If you want to show your appreciation, you can donate via XRP to
-`rD1ioePTv7P1jgELM3tDkDU1LJqTEwuwo` :)
 
 ### Contact
 
